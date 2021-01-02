@@ -1,0 +1,36 @@
+/** @format */
+
+.name {
+	color: black;
+	position: relative;
+	-webkit-text-stroke: 0.05vw white;
+	font-size: 10vw;
+	font-family: "Garamond", serif;
+	font-weight: 100;
+	margin: 0;
+	padding-top: 3vh;
+}
+.name::before {
+	/* the content element is required */
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0vw;
+	height: 100%;
+	color: white;
+	-webkit-text-stroke: 0vw white;
+	overflow: hidden;
+	animation: animate 2s ease;
+	animation-fill-mode: forwards;
+	margin: 0;
+	padding-top: 3vh;
+}
+@keyframes animate {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}

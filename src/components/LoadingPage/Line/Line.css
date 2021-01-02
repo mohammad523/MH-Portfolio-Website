@@ -1,0 +1,24 @@
+/** @format */
+
+.whiteLine {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 0vw;
+	background-color: #ffffff;
+	height: 2vh;
+	animation: whiteLine 1s ease;
+	animation-fill-mode: forwards;
+	overflow-x: hidden;
+	z-index: 5;
+	padding: 0 10px;
+}
+
+@keyframes whiteLine {
+	0% {
+		width: 0vw;
+	}
+	100% {
+		width: 100vw;
+	}
+}
