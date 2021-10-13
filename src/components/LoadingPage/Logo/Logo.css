@@ -21,7 +21,7 @@
 	color: white;
 	-webkit-text-stroke: 0vw white;
 	overflow: hidden;
-	animation: animate 2s ease;
+	animation: animate 2s ease-in-out;
 	animation-fill-mode: forwards;
 	margin: 0;
 	padding-top: 3vh;

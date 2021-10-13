@@ -7,16 +7,17 @@
 	width: 0vw;
 	background-color: #ffffff;
 	height: 2vh;
-	animation: whiteLine 1s ease;
+	animation: whiteLine 2s ease-in-out;
 	animation-fill-mode: forwards;
 	overflow-x: hidden;
 	z-index: 5;
 	padding: 0 10px;
+	/* animation-delay: 0.3s; */
 }
 
 @keyframes whiteLine {
 	0% {
-		width: 0vw;
+		width: 0%;
 	}
 	100% {
 		width: 100vw;
