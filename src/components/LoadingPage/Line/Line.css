@@ -9,7 +9,6 @@
 	height: 2vh;
 	animation: whiteLine 2s ease-in-out;
 	animation-fill-mode: forwards;
-	overflow-x: hidden;
 	z-index: 5;
 	padding: 0 10px;
 	/* animation-delay: 0.3s; */
@@ -17,9 +16,10 @@
 
 @keyframes whiteLine {
 	0% {
-		width: 0%;
+		width: 0vw;
 	}
 	100% {
-		width: 100vw;
+		width: 95vw;
+		overflow-x: hidden;
 	}
 }

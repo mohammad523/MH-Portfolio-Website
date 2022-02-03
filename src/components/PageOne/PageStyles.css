@@ -1,0 +1,66 @@
+/** @format */
+
+.mhLogo {
+	padding: 25px;
+	width: 20vw;
+	/* animation: slide-shrink 15s linear infinite;
+	animation-fill-mode: forwards;
+	animation-delay: 1.5s; */
+	top: -10;
+}
+
+#pageOneTagline {
+	text-align: center;
+}
+
+#page-one-div {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.transition {
+	position: absolute;
+	z-index: 3;
+	height: 100vh;
+	width: 100vw;
+	background-color: black;
+	opacity: 0;
+}
+/* page two styles ///////////////////////////////////////////////////// */
+.page-two {
+	height: 100vh;
+	width: 100%;
+	background-color: black;
+	display: grid;
+	grid-template-columns: 3 (1fr);
+	grid-template-rows: 3 (1fr);
+}
+
+.page-two-tagline {
+	color: white;
+	/* grid-row: 2/3;
+	grid-column: 2/3;
+	align-items: center;
+	justify-content: center; */
+	text-align: center;
+	width: 100%;
+	height: 100vh;
+	/* border: 1px solid white; */
+}
+
+#page-one-div > * {
+	/* border: 1px solid black; */
+}
+
+@keyframes slide-shrink {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

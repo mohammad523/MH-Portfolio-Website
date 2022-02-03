@@ -6,7 +6,7 @@ const Logo = () => {
 	return (
 		<div className='logo'>
 			<h1 data-text='MohammadHasan' className='name'>
-				MohammadHasan
+				Mohammad Hasan
 			</h1>
 		</div>
 	);
