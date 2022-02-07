@@ -30,9 +30,84 @@ const PageOne = () => {
 									}
 								>
 									<Tween
-										from={{ scale: 1 }}
-										to={{ scale: 300, display: "none" }}
+										from={{ opacity: 1 }}
+										to={{ opacity: 0, display: "none" }}
 									/>
+									<Timeline
+										progress={progress}
+										paused
+										target={
+											<div className='absolute'>
+												<h1 className='forward'>
+													HTML • CSS • JAVASCRIPT • REACTJS • MONGODB • NODEJS •
+													RAILS • REACT NATIVE • BOOTSTRAP
+												</h1>
+												\{" "}
+												<h1 className='forward'>
+													BOOTSTRAP • NODEJS • MONGODB • HTML • JAVASCRIPT •
+													REACT NATIVE • RAILS • REACTJS
+												</h1>
+												<h1 className='forward'>
+													CSS • BOOTSTRAP • NODEJS • HTML • JAVASCRIPT • REACT
+													NATIVE • RAILS • REACTJS
+												</h1>
+												<h1 className='forward'>
+													HTML • CSS • JAVASCRIPT • REACTJS • REACTJS • NODEJS •
+													RAILS • REACT NATIVE • BOOTSTRAP
+												</h1>
+												<h1 className='forward'>
+													HTML • CSS • JAVASCRIPT • REACTJS • MONGODB • NODEJS •
+													RAILS • REACT NATIVE • BOOTSTRAP
+												</h1>
+												<h1 className='forward'>
+													HTML • CSS • JAVASCRIPT • REACTJS • REACT NATIVE •
+													NODEJS • RAILS • REACT NATIVE • BOOTSTRAP
+												</h1>
+											</div>
+										}
+									>
+										<Tween
+											from={{ transform: "translateX(100px)" }}
+											to={{ transform: "translateX(250px)" }}
+										></Tween>
+										<Timeline
+											progress={progress}
+											paused
+											target={
+												<div className='absolute2'>
+													<h1 className='backward'>
+														HTML • CSS • REACT NATIVE • REACTJS • JAVASCRIPT
+													</h1>
+													\{" "}
+													<h1 className='backward'>
+														REACTJS • RAILS • REACT NATIVE • JAVASCRIPT • HTML •
+														REACT NATIVE • REACTJS
+													</h1>
+													<h1 className='backward'>
+														REACTJS • RAILS • REACT NATIVE • JAVASCRIPT • HTML •
+														NODEJS • BOOTSTRAP • CSS
+													</h1>
+													<h1 className='backward'>
+														REACTJS • REACTNATIVE • NODEJS • RAILS • BOOTSTRAP •
+														HTML • CSS • JAVASCRIPT • NATIVE
+													</h1>
+													<h1 className='backward'>
+														REACTJS • REACTJS • NODEJS • RAILS • BOOTSTRAP •
+														HTML • CSS • JAVASCRIPT • NATIVE
+													</h1>
+													<h1 className='backward'>
+														REACTJS • REACTJS • REACTJS • RAILS • REACTJS • CSS
+														• REACTJS • NATIVE
+													</h1>
+												</div>
+											}
+										>
+											<Tween
+												from={{ transform: "translateX(0px)" }}
+												to={{ transform: "translateX(-500px)" }}
+											></Tween>
+										</Timeline>
+									</Timeline>
 								</Timeline>
 							</Timeline>
 						</div>

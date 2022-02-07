@@ -1,4 +1,5 @@
 /** @format */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 
 .mhLogo {
 	padding: 25px;
@@ -11,6 +12,8 @@
 
 #pageOneTagline {
 	text-align: center;
+	font-family: "Montserrat", sans-serif;
+	font-size: 30px;
 }
 
 #page-one-div {
@@ -29,6 +32,36 @@
 	background-color: black;
 	opacity: 0;
 }
+
+.absolute {
+	color: silver;
+	position: absolute;
+	z-index: -1;
+	white-space: nowrap;
+	font-size: 50px;
+	font-family: "Montserrat", sans-serif;
+	opacity: 0.3;
+}
+
+.forward {
+	translate: transformY(-10px);
+}
+
+.absolute2 {
+	color: lightgray;
+	font-weight: 100;
+	position: absolute;
+	z-index: -1;
+	white-space: nowrap;
+	font-size: 50px;
+	padding-top: 200px;
+	font-family: "Montserrat", sans-serif;
+	opacity: 0.3;
+}
+
+.backward {
+}
+
 /* page two styles ///////////////////////////////////////////////////// */
 .page-two {
 	height: 100vh;
