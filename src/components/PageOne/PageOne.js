@@ -78,7 +78,7 @@ const PageOne = () => {
 													<h1 className='backward'>
 														HTML • CSS • REACT NATIVE • REACTJS • JAVASCRIPT
 													</h1>
-													\{" "}
+
 													<h1 className='backward'>
 														REACTJS • RAILS • REACT NATIVE • JAVASCRIPT • HTML •
 														REACT NATIVE • REACTJS

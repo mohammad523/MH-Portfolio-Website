@@ -97,3 +97,20 @@
 		transform: rotate(360deg);
 	}
 }
+
+@media only screen and (max-width: 500px) {
+	.mhLogo {
+		width: 200px;
+	}
+	.absolute {
+		font-size: 20px;
+		top: px;
+	}
+	.absolute2 {
+		font-size: 20px;
+		top: -225px;
+	}
+	#pageOneTagline {
+		font-size: 16px;
+	}
+}

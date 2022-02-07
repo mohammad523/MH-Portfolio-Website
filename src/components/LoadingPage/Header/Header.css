@@ -7,3 +7,9 @@
 	font-family: "Source Code Pro", monospace;
 	font-size: 4vw;
 }
+
+@media only screen and (max-width: 500px) {
+	.header {
+		font-size: 25px;
+	}
+}
