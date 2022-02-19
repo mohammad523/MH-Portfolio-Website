@@ -1,13 +1,17 @@
 /** @format */
 import logo from "../../icons/circle.svg";
+import responsive from "../../icons/rtw_responsive_design.png";
+import sdresponsive from "../../icons/social_dev_responsive_design.png";
 import styles from "./PageStyles.css";
 import styled from "styled-components";
 import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
+import { FaReact, FaCss3Alt, FaJs } from "react-icons/fa";
+import { DiMongodb, DiNodejsSmall, DiCss3 } from "react-icons/di";
 
 const PageOne = () => {
 	return (
-		<>
+		<div className='scroll-magic'>
 			<Controller>
 				<Scene triggerHook='onLeave' duration={5000} pin>
 					{(progress) => (
@@ -18,7 +22,6 @@ const PageOne = () => {
 								target={<img src={logo} alt='MH Logo' className='mhLogo' />}
 							>
 								<Tween from={{ rotate: "0deg" }} to={{ rotate: "360deg" }} />
-								<Tween to={{ opacity: 0 }} />
 
 								<Timeline
 									progress={progress}
@@ -29,10 +32,7 @@ const PageOne = () => {
 										</h1>
 									}
 								>
-									<Tween
-										from={{ opacity: 1 }}
-										to={{ opacity: 0, display: "none" }}
-									/>
+									<Tween to={{ display: "none" }} />
 									<Timeline
 										progress={progress}
 										paused
@@ -68,7 +68,12 @@ const PageOne = () => {
 									>
 										<Tween
 											from={{ transform: "translateX(100px)" }}
-											to={{ transform: "translateX(250px)" }}
+											to={{
+												transform: "translateX(250px)",
+												opacity: 0,
+
+												display: "none",
+											}}
 										></Tween>
 										<Timeline
 											progress={progress}
@@ -104,7 +109,11 @@ const PageOne = () => {
 										>
 											<Tween
 												from={{ transform: "translateX(0px)" }}
-												to={{ transform: "translateX(-500px)" }}
+												to={{
+													transform: "translateX(-500px)",
+													opacity: 0,
+													display: "none",
+												}}
 											></Tween>
 										</Timeline>
 									</Timeline>
@@ -113,7 +122,7 @@ const PageOne = () => {
 						</div>
 					)}
 				</Scene>
-				<Scene triggerHook='onLeave' duration={5000} pin>
+				{/* <Scene triggerHook='onLeave' duration={5000} pin>
 					{(progress) => (
 						<div className='page-two'>
 							<Timeline
@@ -126,8 +135,6 @@ const PageOne = () => {
 								<Tween from={{ opacity: 0 }} to={{ opacity: 1 }} />
 								<Tween to={{ opacity: 0, display: "none" }} />
 								<Timeline
-									// progress={progress}
-									// paused
 									target={
 										<p className='page-two-tagline'>
 											Turning your ideas into reality
@@ -141,9 +148,77 @@ const PageOne = () => {
 							</Timeline>
 						</div>
 					)}
+				</Scene> */}
+				<Scene triggerHook='onLeave' duration={"500%"} pin>
+					{(progress) => (
+						<div className='project-container'>
+							<Timeline
+								totalProgress={progress}
+								paused
+								target={
+									<div className='project page-one'>
+										<h1 className='project-title'>Research Trials Worldwide</h1>
+										{/* <img src={logo} className='constant-mhLogo' /> */}
+										<a
+											href='https://rtworldwide.herokuapp.com/'
+											className='link'
+										>
+											<img src={responsive} className='responsive-design' />
+										</a>
+										<p className='project-description'>
+											A beautiful site designed for a pharmaceutical trials
+											company with lazy-loading animations, a custom burger
+											icon, and CSS transitions. The following technologies were
+											used:
+										</p>
+										<ul className='project-technologies'>
+											<li>
+												<FaReact />
+												<FaCss3Alt />
+												<FaJs />
+											</li>
+										</ul>
+									</div>
+								}
+							>
+								<Tween />
+							</Timeline>
+							<Timeline
+								totalProgress={progress}
+								paused
+								target={
+									<div className='project page-two'>
+										<h1 className='project-title'>The Social Dev</h1>
+										{/* <img src={logo} className='constant-mhLogo' /> */}
+										<a
+											href='https://the-social-dev-network.herokuapp.com/login'
+											className='link'
+										>
+											<img src={sdresponsive} className='responsive-design' />
+										</a>
+										<p className='project-description'>
+											A social network for developers connected to a fully
+											functional REST API with user authentication, Redux state
+											management, and a live feed.
+										</p>
+										<ul className='project-technologies'>
+											<li>
+												<FaReact />
+												<DiCss3 />
+												<DiMongodb />
+												<DiNodejsSmall />
+											</li>
+										</ul>
+									</div>
+								}
+							>
+								<Tween />
+							</Timeline>
+						</div>
+					)}
 				</Scene>
 			</Controller>
-		</>
+		</div>
 	);
 };
 

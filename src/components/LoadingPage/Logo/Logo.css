@@ -1,17 +1,17 @@
 /** @format */
 
 .name {
-	color: black;
+	color: white;
 	position: relative;
-	-webkit-text-stroke: 0.05vw white;
+	color: 0.05vw white;
 	font-size: 10vw;
 	font-family: "Garamond", serif;
 	font-weight: 100;
 	margin: 0;
 	padding-top: 3vh;
 }
-.name::before {
-	/* the content element is required */
+/* /* .name::before {
+	/* the content element is required 
 	content: attr(data-text);
 	position: absolute;
 	top: 0;
@@ -24,8 +24,8 @@
 	animation: animate 2s ease-in-out;
 	animation-fill-mode: forwards;
 	margin: 0;
-	padding-top: 3vh;
-}
+	padding-top: 3vh; 
+} */
 @keyframes animate {
 	0% {
 		width: 0%;
